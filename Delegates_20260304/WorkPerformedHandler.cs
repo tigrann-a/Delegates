@@ -1,3 +1,3 @@
 ﻿namespace Delegates_20260304;
 
-internal delegate void WorkPerformedHandler(int hours, WorkType workType);
+internal delegate int WorkPerformedHandler(int hours, WorkType workType);

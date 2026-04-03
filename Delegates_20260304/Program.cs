@@ -14,7 +14,11 @@ Console.WriteLine();
 del1 += del2;
 del1 += del3;
 
-del1(10, WorkType.Reports);
+int finalHours = del1(10, WorkType.Reports);
+
+Console.WriteLine("---");
+
+Console.WriteLine(finalHours);
 
 Console.ReadKey();
 
@@ -23,17 +27,20 @@ static void DoWork(WorkPerformedHandler del)
     del(5, WorkType.Meeting);
 }
 
-static void WorkPerformed_1(int hours, WorkType workType)
+static int WorkPerformed_1(int hours, WorkType workType)
 {
     Console.WriteLine("1");
+    return hours + 1;
 }
 
-static void WorkPerformed_2(int hours, WorkType workType)
+static int WorkPerformed_2(int hours, WorkType workType)
 {
     Console.WriteLine("2");
+    return hours + 1;
 }
 
-static void WorkPerformed_3(int hours, WorkType workType)
+static int WorkPerformed_3(int hours, WorkType workType)
 {
     Console.WriteLine("3");
+    return hours + 1;
 }
